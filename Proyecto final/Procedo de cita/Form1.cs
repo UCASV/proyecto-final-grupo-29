@@ -51,9 +51,9 @@ namespace Procedo_de_cita
         private void bttnAccept_Click(object sender, EventArgs e)
         {
             var expression = "^[0-9]{9}$";
-            var text = txtbDUI.Text;
+            string text = txtbDUI.Text;
             var db = new FinalProjectPOO_DBContext();
-            var listCitizen = db.Citizens.Where(c => c.Dui.Equals(Convert.ToInt32(txtbDUI.Text))).ToList();
+            var listCitizen = db.Citizens.Where(c => c.Dui.Equals(text)).ToList();
             if (Regex.IsMatch(text, expression))
             {
                 if (txtbName.Text.Length > 5 && txtbAddress.Text.Length > 5 && txtbPhone.Text.Length > 5)
@@ -66,7 +66,7 @@ namespace Procedo_de_cita
 
                         var citizen = new Citizen();
 
-                        citizen.Dui = Convert.ToInt32(txtbDUI.Text);
+                        citizen.Dui = txtbDUI.Text;
                         citizen.Name = txtbName.Text;
                         citizen.Address = txtbAddress.Text;
                         citizen.Phone = Convert.ToInt32(txtbPhone.Text);

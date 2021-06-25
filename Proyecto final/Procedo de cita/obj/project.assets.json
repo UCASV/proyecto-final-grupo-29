@@ -5767,11 +5767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\POO\\Proyecto final\\Procedo de cita\\Procedo de cita.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\proyecto-final-grupo-29\\Proyecto final\\Procedo de cita\\Procedo de cita.csproj",
       "projectName": "Procedo de cita",
-      "projectPath": "C:\\Users\\HP\\Desktop\\POO\\Proyecto final\\Procedo de cita\\Procedo de cita.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\proyecto-final-grupo-29\\Proyecto final\\Procedo de cita\\Procedo de cita.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\POO\\Proyecto final\\Procedo de cita\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\proyecto-final-grupo-29\\Proyecto final\\Procedo de cita\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

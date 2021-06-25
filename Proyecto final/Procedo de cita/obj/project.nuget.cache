@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S1X8ZVXfU5JDTJxnJSQez3q9Ex9Lxq2iWTARjiAIDhAfDA4/IjMuLeJNUMtFGvSonbAE0WAedBh1+TZ6bQ3jDA==",
+  "dgSpecHash": "m5ZJpK+IA+LfOzBZwOkDUkq+mO91hcEsKpjMYshVKDHAa4stKVu0kk6OO+Wn6FuGNKGBK9q9fTGrIPXDDy0Pbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\POO\\Proyecto final\\Procedo de cita\\Procedo de cita.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\proyecto-final-grupo-29\\Proyecto final\\Procedo de cita\\Procedo de cita.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
