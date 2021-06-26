@@ -15,7 +15,7 @@ namespace Procedo_de_cita
 {
     public partial class Form1 : Form
     {
-       
+        
         public Form1()
         {
             InitializeComponent();
@@ -74,8 +74,25 @@ namespace Procedo_de_cita
                         citizen.Birthday = dtpBirthDay.Value.Date;
                         citizen.IdAppointment1 = null;
                         citizen.IdInstitution = dbinstitution.Id;
+                
+                        var appointment = new Appointment();
+                        var rand = new Random();
+                        int n;
+                        n = rand.Next(3, 10);
+                        var date = DateTime.Now.Date;
+                        date = date.AddDays(n);
+                        n = rand.Next(5, 17);
+                        date = date.AddHours(n);
+                        appointment.TimeDate = date;
+                        n = rand.Next(1, db.Cabins.Count());
+                        appointment.IdCabinAppointment1 = n;
+                        db.Add(appointment);
+                        db.SaveChanges();
+                        int idAppointment = db.Appointments.OrderBy(c => c.IdAppointment1).Last().IdAppointment1;
+                        citizen.IdAppointment1 = idAppointment;
                         db.Add(citizen);
                         db.SaveChanges();
+
                         MessageBox.Show("Ciudadano Ingresado.", "c", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
@@ -104,6 +121,18 @@ namespace Procedo_de_cita
             cmbIntitution.DataSource = institution;
             cmbIntitution.ValueMember = "Id";
             cmbIntitution.DisplayMember = "Institution1";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtbDisease.Text.Length > 5)
+            {
+              cblDisease.Items.Add(txtbDisease.Text);
+            }
+            else
+            {
+             MessageBox.Show("ERROR Digite mas de 5 caracteres", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

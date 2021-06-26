@@ -33,6 +33,7 @@ namespace Procedo_de_cita
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lbldui = new System.Windows.Forms.Label();
             this.txtbName = new System.Windows.Forms.TextBox();
@@ -49,7 +50,9 @@ namespace Procedo_de_cita
             this.lblinstitution = new System.Windows.Forms.Label();
             this.lblDisease = new System.Windows.Forms.Label();
             this.cmbIntitution = new System.Windows.Forms.ComboBox();
-            this.bttnAccept = new System.Windows.Forms.Button();
+            this.txtbDisease = new System.Windows.Forms.TextBox();
+            this.cblDisease = new System.Windows.Forms.CheckedListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -88,9 +91,11 @@ namespace Procedo_de_cita
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.5F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.lblTitulo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbldui, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtbName, 0, 4);
@@ -107,7 +112,9 @@ namespace Procedo_de_cita
             this.tableLayoutPanel1.Controls.Add(this.lblinstitution, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lblDisease, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.cmbIntitution, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.bttnAccept, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.txtbDisease, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.cblDisease, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 2, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
@@ -125,6 +132,17 @@ namespace Procedo_de_cita
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(3, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(258, 33);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Crear Formulario";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // lblTitulo
             // 
             this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -132,7 +150,7 @@ namespace Procedo_de_cita
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.RoyalBlue;
-            this.tableLayoutPanel1.SetColumnSpan(this.lblTitulo, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.lblTitulo, 3);
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblTitulo.Location = new System.Drawing.Point(3, 0);
@@ -298,17 +316,35 @@ namespace Procedo_de_cita
             this.cmbIntitution.Size = new System.Drawing.Size(258, 23);
             this.cmbIntitution.TabIndex = 15;
             // 
-            // bttnAccept
+            // txtbDisease
             // 
-            this.bttnAccept.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bttnAccept.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bttnAccept.Location = new System.Drawing.Point(3, 381);
-            this.bttnAccept.Name = "bttnAccept";
-            this.bttnAccept.Size = new System.Drawing.Size(258, 33);
-            this.bttnAccept.TabIndex = 16;
-            this.bttnAccept.Text = "Crear Formulario";
-            this.bttnAccept.UseVisualStyleBackColor = false;
-            this.bttnAccept.Click += new System.EventHandler(this.bttnAccept_Click);
+            this.txtbDisease.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtbDisease.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtbDisease.Location = new System.Drawing.Point(399, 339);
+            this.txtbDisease.Name = "txtbDisease";
+            this.txtbDisease.Size = new System.Drawing.Size(258, 23);
+            this.txtbDisease.TabIndex = 17;
+            // 
+            // cblDisease
+            // 
+            this.cblDisease.FormattingEnabled = true;
+            this.cblDisease.Location = new System.Drawing.Point(399, 381);
+            this.cblDisease.Name = "cblDisease";
+            this.cblDisease.Size = new System.Drawing.Size(258, 22);
+            this.cblDisease.TabIndex = 19;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(664, 339);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 33);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Agregar Enfermedad";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -349,8 +385,10 @@ namespace Procedo_de_cita
         private System.Windows.Forms.Label lblDisease;
         private System.Windows.Forms.DateTimePicker dtpBirthDay;
         private System.Windows.Forms.ComboBox cmbIntitution;
-        private System.Windows.Forms.Button bttaccept;
-        private System.Windows.Forms.Button bttnAccept;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtbDisease;
+        private System.Windows.Forms.CheckedListBox cblDisease;
+        private System.Windows.Forms.Button button2;
     }
 }
 
