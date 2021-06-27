@@ -110,3 +110,5 @@ C:\Users\HP\Desktop\proyecto-final-grupo-29\Proyecto final\Procedo de cita\obj\D
 C:\Users\HP\Desktop\proyecto-final-grupo-29\Proyecto final\Procedo de cita\obj\Debug\net5.0-windows\ref\Procedo de cita.dll
 C:\Users\HP\Desktop\proyecto-final-grupo-29\Proyecto final\Procedo de cita\obj\Debug\net5.0-windows\Procedo de cita.pdb
 C:\Users\HP\Desktop\proyecto-final-grupo-29\Proyecto final\Procedo de cita\obj\Debug\net5.0-windows\Procedo de cita.genruntimeconfig.cache
+C:\Users\HP\Desktop\proyecto-final-grupo-29\Proyecto final\Procedo de cita\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\HP\Desktop\proyecto-final-grupo-29\Proyecto final\Procedo de cita\bin\Debug\net5.0-windows\itextsharp.dll
