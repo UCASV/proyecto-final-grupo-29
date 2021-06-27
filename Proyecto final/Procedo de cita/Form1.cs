@@ -61,84 +61,93 @@ namespace Procedo_de_cita
             {
                 if (txtbName.Text.Length > 5 && txtbAddress.Text.Length > 5 && txtbPhone.Text.Length > 5)
                 {
-                    if (listCitizen.Count == 0)
+                    var expression2 = "^[0-9]{8}$";
+                    string text2 = txtbPhone.Text;
+                    if (Regex.IsMatch(text2, expression2))
                     {
-                        Institution choice = new Institution();
-                        choice.Id = ((Institution)cmbIntitution.SelectedItem).Id;
-                        Institution dbinstitution = db.Set<Institution>().SingleOrDefault(inst => inst.Id == choice.Id);
-                        DialogResult  r = MessageBox.Show("¿El ciudadano es una mayor de 18 años con enfermedades no transmisibles o alguna discapacidad?", "c", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if ((DateTime.Now.Year - dtpBirthDay.Value.Year) >= 60 || dbinstitution.Id == 2 || dbinstitution.Id == 3 || dbinstitution.Id == 4 || 
-                            dbinstitution.Id == 5 || dbinstitution.Id == 7 || dbinstitution.Id == 8 || dbinstitution.Id == 9 || r == DialogResult.Yes)
+                        if (listCitizen.Count == 0)
                         {
+                            Institution choice = new Institution();
+                            choice.Id = ((Institution)cmbIntitution.SelectedItem).Id;
+                            Institution dbinstitution = db.Set<Institution>().SingleOrDefault(inst => inst.Id == choice.Id);
+                            DialogResult r = MessageBox.Show("¿El ciudadano es una mayor de 18 años con enfermedades no transmisibles o alguna discapacidad?", "c", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if ((DateTime.Now.Year - dtpBirthDay.Value.Year) >= 60 || dbinstitution.Id == 2 || dbinstitution.Id == 3 || dbinstitution.Id == 4 ||
+                                dbinstitution.Id == 5 || dbinstitution.Id == 7 || dbinstitution.Id == 8 || dbinstitution.Id == 9 || r == DialogResult.Yes)
+                            {
 
-                            var citizen = new Citizen();
-                            //agregacion de datos del ciudadano
-                            citizen.Dui = txtbDUI.Text;
-                            citizen.Name = txtbName.Text;
-                            citizen.Address = txtbAddress.Text;
-                            citizen.Phone = Convert.ToInt32(txtbPhone.Text);
-                            citizen.Email = txtbEmail.Text;
-                            citizen.Birthday = dtpBirthDay.Value.Date;
-                            citizen.IdAppointment1 = null;
-                            citizen.IdInstitution = dbinstitution.Id;
-                            //creacion de la cita
-                            var appointment = new Appointment();
-                            var rand = new Random();
-                            int n;
-                            n = rand.Next(3, 10);
-                            var date = DateTime.Now.Date;
-                            date = date.AddDays(n);
-                            n = rand.Next(5, 17);
-                            date = date.AddHours(n);
-                            appointment.TimeDate = date;
-                            n = rand.Next(1, db.Cabins.Count());
-                            appointment.IdCabinAppointment1 = n;
-                            db.Add(appointment);
-                            db.SaveChanges();
-                            //añadiendo el id de la cita al ciudadano y guardandolo el la base de datos
-                            int idAppointment = db.Appointments.OrderBy(c => c.IdAppointment1).Last().IdAppointment1;
-                            citizen.IdAppointment1 = idAppointment;
-                            db.Add(citizen);
-                            db.SaveChanges();
-                            // agregacion de la lista de enfermedades del ciudadano
-                            if (ltbDisease.Items.Count == 0) { }
+                                var citizen = new Citizen();
+                                //agregacion de datos del ciudadano
+                                citizen.Dui = txtbDUI.Text;
+                                citizen.Name = txtbName.Text;
+                                citizen.Address = txtbAddress.Text;
+                                citizen.Phone = Convert.ToInt32(txtbPhone.Text);
+                                citizen.Email = txtbEmail.Text;
+                                citizen.Birthday = dtpBirthDay.Value.Date;
+                                citizen.IdAppointment1 = null;
+                                citizen.IdInstitution = dbinstitution.Id;
+                                //creacion de la cita
+                                var appointment = new Appointment();
+                                var rand = new Random();
+                                int n;
+                                n = rand.Next(3, 10);
+                                var date = DateTime.Now.Date;
+                                date = date.AddDays(n);
+                                n = rand.Next(5, 17);
+                                date = date.AddHours(n);
+                                appointment.TimeDate = date;
+                                n = rand.Next(1, db.Cabins.Count());
+                                appointment.IdCabinAppointment1 = n;
+                                db.Add(appointment);
+                                db.SaveChanges();
+                                //añadiendo el id de la cita al ciudadano y guardandolo el la base de datos
+                                int idAppointment = db.Appointments.OrderBy(c => c.IdAppointment1).Last().IdAppointment1;
+                                citizen.IdAppointment1 = idAppointment;
+                                db.Add(citizen);
+                                db.SaveChanges();
+                                // agregacion de la lista de enfermedades del ciudadano
+                                if (ltbDisease.Items.Count == 0) { }
+                                else
+                                {
+                                    foreach (var item in ltbDisease.Items)
+                                    {
+                                        var disease = new Disease();
+                                        disease.DuiCitizen = citizen.Dui;
+                                        disease.Disease1 = item.ToString();
+                                        db.Add(disease);
+                                        db.SaveChanges();
+                                    }
+                                }
+                                var cabin = db.Cabins.Where(c => c.Id.Equals(appointment.IdCabinAppointment1));
+                                MessageBox.Show("Ciudadano Ingresado.", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Fecha cita = {appointment.TimeDate} Dirreccion = {cabin.First().Address}, ", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                returntonormal();
+                                GeneratePDF(citizen.Dui);
+                            }
                             else
                             {
-                                foreach (var item in ltbDisease.Items)
-                                {
-                                    var disease = new Disease();
-                                    disease.DuiCitizen = citizen.Dui;
-                                    disease.Disease1 = item.ToString();
-                                    db.Add(disease);
-                                    db.SaveChanges();
-                                }
+                                MessageBox.Show("Usted no cumple con ninguna condición de un grupo de atención de prioridad.Por favor, espere a que este proceso sea habilitado para usted", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                returntonormal();
                             }
-                            var cabin = db.Cabins.Where(c => c.Id.Equals(appointment.IdCabinAppointment1));
-                            MessageBox.Show("Ciudadano Ingresado.", "c", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            MessageBox.Show($"Fecha cita = {appointment.TimeDate} Dirreccion = {cabin.First().Address}, ", "c", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            returntonormal();
-                            GeneratePDF(citizen.Dui);
+
                         }
                         else
                         {
-                            MessageBox.Show("Usted no cumple con ninguna condición de un grupo de atención de prioridad.Por favor, espere a que este proceso sea habilitado para usted", "c", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            returntonormal();
+                            MessageBox.Show("ERROR Dui duplicado!", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-
                     }
                     else
                     {
-                        MessageBox.Show("ERROR Dui duplicado!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("ERROR Numero de telefono no aceptado, ejemplo: '00000000'", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("ERROR Digite mas de 5 caracteres en la barras de texto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ERROR Digite mas de 5 caracteres en la barras de texto", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("ERROR Dui erroneo ejemplo : '000000000'", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR Dui erroneo ejemplo : '000000000'", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -163,7 +172,7 @@ namespace Procedo_de_cita
             }
             else
             {
-                MessageBox.Show("ERROR Digite mas de 5 caracteres en la barra de texto de enfermedades", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR Digite mas de 5 caracteres en la barra de texto de enfermedades", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -171,12 +180,12 @@ namespace Procedo_de_cita
         {
             if (ltbDisease.Items.Count == 0)
             {
-                MessageBox.Show("La lista no posee ningun dato", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La lista no posee ningun dato", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 ltbDisease.Items.Clear();
-                MessageBox.Show("La lista se elimino correctamente", "c", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La lista se elimino correctamente", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -212,10 +221,10 @@ namespace Procedo_de_cita
         }
         private void GeneratePDF(string dui)
         {
-            
+            string MachineName = Environment.UserName;
             var db = new FinalProjectPOO_DBContext();
             var data = db.Citizens.Where(c => c.Dui.Equals(dui));
-            var fs = new FileStream($@"C:\Users\HP\Documents\PDFFormulario{dui}.pdf", FileMode.Create);
+            var fs = new FileStream($@"C:\Users\{MachineName}\Documents\PDFFormulario{dui}.pdf", FileMode.Create);
             Document doc = new Document(PageSize.LETTER,5,5,7,7);
             PdfWriter pw = PdfWriter.GetInstance(doc, fs);
             var datainst = db.Institutions.Where(inst => inst.Id.Equals(data.First().IdInstitution));
@@ -355,11 +364,7 @@ namespace Procedo_de_cita
             doc.Add(Chunk.NEWLINE);
             doc.Close();
             pw.Close();
-            MessageBox.Show("Documento pdf Creado.", "c", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        }
-        private void detectnull( )
-        {
+            MessageBox.Show("Documento pdf Creado, se agrego en el archivo documentos", "Vacunacion UCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
