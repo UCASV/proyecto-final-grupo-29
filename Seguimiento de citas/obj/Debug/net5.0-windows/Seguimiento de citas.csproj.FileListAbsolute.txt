@@ -5,3 +5,62 @@ C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimien
 C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.AssemblyInfoInputs.cache
 C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.AssemblyInfo.cs
 C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento_de_citas.Form1.resources
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento_de_citas.Properties.Resources.resources
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.AssemblyInfo.cs
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Seguimiento de citas.exe
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Seguimiento de citas.deps.json
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Seguimiento de citas.runtimeconfig.json
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Seguimiento de citas.runtimeconfig.dev.json
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Seguimiento de citas.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\ref\Seguimiento de citas.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Seguimiento de citas.pdb
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Humanizer.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\itextsharp.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.CopyComplete
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\ref\Seguimiento de citas.dll
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.pdb
+C:\Users\HP\Desktop\Nueva carpeta (2)\proyecto-final-grupo-29\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.genruntimeconfig.cache

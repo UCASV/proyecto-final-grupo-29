@@ -83,7 +83,7 @@ namespace Seguimiento_de_citas
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Source Sans Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(58, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 62);
@@ -93,12 +93,10 @@ namespace Seguimiento_de_citas
             // 
             // txtDui
             // 
-            this.txtDui.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDui.Location = new System.Drawing.Point(153, 60);
+            this.txtDui.Location = new System.Drawing.Point(153, 44);
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(89, 23);
             this.txtDui.TabIndex = 1;
-            this.txtDui.Click += new System.EventHandler(this.txtDui_TextChanged);
             // 
             // search
             // 
@@ -152,7 +150,7 @@ namespace Seguimiento_de_citas
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(556, 145);
+            this.tabPage2.Size = new System.Drawing.Size(271, 145);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -169,7 +167,7 @@ namespace Seguimiento_de_citas
             this.button2.TabIndex = 5;
             this.button2.Text = "Generar PDF";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.generate_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Cancel
             // 
@@ -193,6 +191,7 @@ namespace Seguimiento_de_citas
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Seguimiento de citas";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

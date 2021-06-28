@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using Seguimiento_de_citas.databaseContext;
+using Microsoft.EntityFrameworkCore;
+using Seguimiento_de_citas;
 
 namespace Seguimiento_de_citas
 {
@@ -22,8 +25,8 @@ namespace Seguimiento_de_citas
         private void search_Click(object sender, EventArgs e)
         {
             FinalProjectPOO_DBContext db = new FinalProjectPOO_DBContext();
-            var listOcitizen = db.Citizens.Include(c => c.Id).ToList();
-            var results = listdui.Where(u => u.Dui.Equals(txtDui.Text)).ToList();
+            var listOcitizen = db.Citizens.ToList();
+            var results = listOcitizen.Where(u => u.Dui.Equals(txtDui.Text)).ToList();
 
             if (results.Count == 0 || txtDui.Text.Length == 0)
             {
@@ -32,24 +35,79 @@ namespace Seguimiento_de_citas
             }
             else
             {
-                using (var context = new AppointmentContext())
+                using (var context = new FinalProjectPOO_DBContext())
                 {
                     dgvAppointmentTracking.DataSource = null;
 
                     var citizen = context.Citizens.First(a => a.Dui.Equals(txtDui.Text));
-                    var newDS = context.IdAppointment.Where(e => e.Id.Equals(citizen.id_appointment1)).ToList();
+                    var newDS = context.Appointments.Where(e => e.IdAppointment1.Equals(citizen.IdAppointment1)).ToList();
 
-                    var mappedDS = new List<IdAppointmentI>();
-                    newDS.ForEach(i => mappedDS.Add(FinalProjectPOO_DBMapped.Mapid_appointment1ToIdAppointment(e)));
-                    dgvAppointmentTracking.DataSource = mappedDS;
+                    var mappedDS = addDateInformation();
+                    var appointmentSearch = mappedDS.Where(m => m.IdAppointment1.Equals(newDS.First().IdAppointment1)).ToList();
+                    dgvAppointmentTracking.DataSource = appointmentSearch;
                 }
             }
         }
-    }
 
-        private void generate_Click(object sender, EventArgs e)
+        private List<DateInformation> addDateInformation()
         {
-        GeneratePDF();
+            FinalProjectPOO_DBContext db = new FinalProjectPOO_DBContext();
+            var data = db.Appointments.ToList();
+            var datacabin = db.Cabins.ToList();
+            List<DateInformation> list = new List<DateInformation>();
+            if (data.Count > 0)
+            {
+                for (int i = 0; i < data.Count; i++)
+                {
+                    DateInformation datevalue = new DateInformation();
+                    datevalue.IdAppointment1 = data[i].IdAppointment1;
+                    datevalue.Fecha_hora_cita = data[i].TimeDate;
+                    datevalue.Fecha_hora_cola = data[i].TimeDateRow;
+                    datevalue.Fecha_hora_vacuna = data[i].TimeDateVaccine;
+                    var addreCabin = datacabin.Where(d => d.Id.Equals(data[i].IdCabinAppointment1)).ToList();
+                    datevalue.Dirrecion1 = addreCabin.First().Address;
+                    datevalue.IdAppointment2 = data[i].IdAppointment2;
+                    datevalue.Fecha_hora_cita2 = data[i].TimeDat2;
+                    datevalue.Fecha_hora_cola2 = data[i].TimeDateRow2;
+                    datevalue.Fecha_hora_vacuna2 = data[i].TimeDateVaccine2;
+                    var addreCabin2 = datacabin.Where(d => d.Id == data[i].IdCabinAppointment2).ToList();
+                    if (addreCabin2.Count > 0)
+                    {
+                        datevalue.Dirrecion2 = addreCabin2.First().Address;
+                    }
+                    else
+                    {
+                        datevalue.Dirrecion2 = null;
+                    }
+                    list.Add(datevalue);
+                }
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FinalProjectPOO_DBContext db = new FinalProjectPOO_DBContext();
+            var listOcitizen = db.Citizens.ToList();
+            var results = listOcitizen.Where(u => u.Dui.Equals(txtDui.Text)).ToList();
+            if (results.Count > 0)
+            {
+                GeneratePDF(results.First().Dui);
+            }
+            else
+            {
+                MessageBox.Show("Ciudadano no encontrado", "Vacunacion", MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void GeneratePDF(string dui)
@@ -97,41 +155,74 @@ namespace Seguimiento_de_citas
             {
                 doc.Add(new Phrase($"Fecha y hora fila = null", StandarFont));
                 doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Dirrecion  = {datacabin1.First().Address}", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase("Informacion del Segunda cita", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora fila  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Dirrecion = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
             }
             else
             {
                 doc.Add(new Phrase($"Fecha y hora fila  = {dataappo.First().TimeDateRow.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().TimeDateVaccine == null)
+            {
+                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Fecha y hora vacuna  = {dataappo.First().TimeDateVaccine.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().IdCabinAppointment1 == null)
+            {
+                doc.Add(new Phrase($"Dirrecion  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Dirrecion  = {datacabin1.First().Address}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            doc.Add(Chunk.NEWLINE);
+            doc.Add(new Phrase("Informacion del Segunda cita", StandarFont));
+            doc.Add(Chunk.NEWLINE);
+            if (dataappo.First().TimeDat2 == null)
+            {
                 doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase("Informacion del Segunda cita", StandarFont));
+                doc.Add(new Phrase($"Fecha y hora  = null", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(Chunk.NEWLINE);
                 doc.Add(new Phrase($"Fecha y hora  = {dataappo.First().TimeDat2.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().TimeDateRow2 == null)
+            {
+                doc.Add(new Phrase($"Fecha y hora fila  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Fecha y hora fila  = {dataappo.First().TimeDateRow2.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().TimeDateVaccine2 == null)
+            {
+                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Fecha y hora vacuna  = {dataappo.First().TimeDateVaccine2.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().IdCabinAppointment2 == null)
+            {
+                doc.Add(new Phrase($"Dirrecion = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Dirrecion  = {datacabin2.First().Address}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
             }
@@ -201,14 +292,11 @@ namespace Seguimiento_de_citas
 
         }
 
-        private void Cancel_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void txtDui_TextChanged(object sender, EventArgs e)
-        {
-
+            dgvAppointmentTracking.DataSource = null;
+            dgvAppointmentTracking.DataSource = addDateInformation();
         }
     }
 }
+
