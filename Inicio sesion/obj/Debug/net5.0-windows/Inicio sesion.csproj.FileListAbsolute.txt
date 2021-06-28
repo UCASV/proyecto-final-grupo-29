@@ -1,7 +1,0 @@
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio sesion.csprojAssemblyReference.cache
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio_sesion.FormLog.resources
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio sesion.csproj.GenerateResource.cache
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio sesion.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio sesion.AssemblyInfoInputs.cache
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio sesion.AssemblyInfo.cs
-C:\Users\PC\source\repos\Inicio sesion\obj\Debug\net5.0-windows\Inicio sesion.csproj.CoreCompileInputs.cache
