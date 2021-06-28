@@ -1,0 +1,7 @@
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento_de_citas.Form1.resources
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.AssemblyInfo.cs
+C:\Users\PC\source\repos\Seguimiento de citas\obj\Debug\net5.0-windows\Seguimiento de citas.csproj.CoreCompileInputs.cache
