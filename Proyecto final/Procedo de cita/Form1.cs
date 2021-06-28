@@ -264,41 +264,74 @@ namespace Procedo_de_cita
             {
                 doc.Add(new Phrase($"Fecha y hora fila = null", StandarFont));
                 doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Dirrecion  = {datacabin1.First().Address}", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase("Informacion del Segunda cita", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora fila  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
-                doc.Add(new Phrase($"Dirrecion = null", StandarFont));
-                doc.Add(Chunk.NEWLINE);
             }
             else
             {
                 doc.Add(new Phrase($"Fecha y hora fila  = {dataappo.First().TimeDateRow.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().TimeDateVaccine == null)
+            {
+                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Fecha y hora vacuna  = {dataappo.First().TimeDateVaccine.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().IdCabinAppointment1 == null)
+            {
+                doc.Add(new Phrase($"Dirrecion  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Dirrecion  = {datacabin1.First().Address}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
                 doc.Add(Chunk.NEWLINE);
                 doc.Add(new Phrase("Informacion del Segunda cita", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            if (dataappo.First().TimeDat2 == null)
+            {
+                doc.Add(Chunk.NEWLINE);
+                doc.Add(new Phrase($"Fecha y hora  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(Chunk.NEWLINE);
                 doc.Add(new Phrase($"Fecha y hora  = {dataappo.First().TimeDat2.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().TimeDateRow2 == null)
+            {
+                doc.Add(new Phrase($"Fecha y hora fila  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Fecha y hora fila  = {dataappo.First().TimeDateRow2.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().TimeDateVaccine2 == null)
+            {
+                doc.Add(new Phrase($"Fecha y hora vacuna  = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {
                 doc.Add(new Phrase($"Fecha y hora vacuna  = {dataappo.First().TimeDateVaccine2.Value}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
+            }
+            if (dataappo.First().IdCabinAppointment2 == null)
+            {
+                doc.Add(new Phrase($"Dirrecion = null", StandarFont));
+                doc.Add(Chunk.NEWLINE);
+            }
+            else
+            {               
                 doc.Add(new Phrase($"Dirrecion  = {datacabin2.First().Address}", StandarFont));
                 doc.Add(Chunk.NEWLINE);
             }
