@@ -27,6 +27,8 @@
 
 
 ![Foto instalador](https://i.gyazo.com/15c8059bb997d333b1ea19e7b528b14e.png)
+
+
 3. Sigues estos pasos
 
 
