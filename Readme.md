@@ -31,7 +31,7 @@
 ![Foto instalador](https://i.gyazo.com/15c8059bb997d333b1ea19e7b528b14e.png)
 
 
-3. Sigues estos pasos
+3. Siguen estos pasos
 
 
 Presiona el boton siguiente
@@ -49,12 +49,12 @@ Presiona el boton siguiente, Le pedira un permiso, le dan aceptar.
 
 ![Fotos pasos](https://i.gyazo.com/537456f0d524fb54e903ab8bf31ef183.png)
 
-Esperas a que se instale y luego le das a siguiente
+Esperan a que se instale y luego le dan a siguiente
 
 
 ![Fotos pasos](https://i.gyazo.com/2f4a4eed821886fd0a05ae3da7b606bd.png)
 
-Termina la instalacion, le das a cerrar, y saldra un ejecutable llamado VacunacionUCA
+Termina la instalacion, le dan a cerrar, Se creara un ejecutable en el escritorio
 
 
 ![Fotos pasos](https://i.gyazo.com/2feb0b8a131c5d3a973e528849413cd2.png)
