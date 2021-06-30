@@ -272,11 +272,11 @@ namespace FinalPOOBD
             disease.BorderWidth = 0;
             disease.BorderWidthBottom = 0.75f;
             PdfPCell effect1 = new PdfPCell(new Phrase("Efectos de vacula cita uno", StandarFont));
-            disease.BorderWidth = 0;
-            disease.BorderWidthBottom = 0.75f;
+            effect1.BorderWidth = 0;
+            effect1.BorderWidthBottom = 0.75f;
             PdfPCell effect2 = new PdfPCell(new Phrase("Efectos de vacula cita dos", StandarFont));
-            disease.BorderWidth = 0;
-            disease.BorderWidthBottom = 0.75f;
+            effect2.BorderWidth = 0;
+            effect2.BorderWidthBottom = 0.75f;
             tbl.AddCell(disease);
             tbl1.AddCell(effect1);
             tbl2.AddCell(effect2);
@@ -292,25 +292,28 @@ namespace FinalPOOBD
                     tbl.AddCell(disease);
                 }
             }
-            var effect1list = db.EffectAppointment1s.Where(e => e.IdAppointment1.Equals(dataappo.First().IdAppointment1));
+            var db2 = new FinalProjectPOO_DBContext();
+            var effect1list = db2.EffectAppointment1s.Where(e => e.IdAppointment1.Equals(dataappo.First().IdAppointment1));
+            var effect = db2.EffectCatalogs.ToList();
             if (effect1list.Count() > 0)
             {
-                foreach (var item in effect1list)
+                foreach (EffectAppointment1 item in effect1list)
                 {
-                    var effect = db.EffectCatalogs.Where(e => e.Id.Equals(item.IdEffectCatalog));
-                    effect1 = new PdfPCell(new Phrase(effect.First().Effect, StandarFont));
+                    var dataeffect = effect.Where(e => e.Id == item.IdEffectCatalog).ToList();
+                    effect1 = new PdfPCell(new Phrase(dataeffect.First().Effect, StandarFont));
                     effect1.BorderWidth = 0;
 
                     tbl1.AddCell(effect1);
                 }
             }
-            var effect1list2 = db.EffectAppointment2s.Where(e => e.IdAppointment2.Equals(dataappo.First().IdAppointment1));
+            var effect1list2 = db2.EffectAppointment2s.Where(e => e.IdAppointment2.Equals(dataappo.First().IdAppointment1));
             if (effect1list2.Count() > 0)
             {
-                foreach (var item in effect1list2)
+                
+                foreach (EffectAppointment2 item in effect1list2)
                 {
-                    var effect = db.EffectCatalogs.Where(e => e.Id.Equals(item.IdEffectCatalog));
-                    effect2 = new PdfPCell(new Phrase(effect.First().Effect, StandarFont));
+                   var dataeffect = effect.Where(e => e.Id == item.IdEffectCatalog).ToList();
+                    effect2 = new PdfPCell(new Phrase(dataeffect.First().Effect, StandarFont));
                     effect2.BorderWidth = 0;
 
                     tbl2.AddCell(effect2);

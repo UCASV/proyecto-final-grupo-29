@@ -5855,11 +5855,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Nueva carpeta (2)\\Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\FinalPOOBD.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Final Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\FinalPOOBD.csproj",
       "projectName": "FinalPOOBD",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Nueva carpeta (2)\\Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\FinalPOOBD.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\Final Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\FinalPOOBD.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Nueva carpeta (2)\\Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\Final Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

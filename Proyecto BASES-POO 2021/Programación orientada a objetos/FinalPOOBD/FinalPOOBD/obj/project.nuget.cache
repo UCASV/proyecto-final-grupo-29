@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qSN4ziK+8sViShz38KGPMDgfMl9N/B9UzjiemcNdYqrSMyw+LN9x8VEy3PGlUupdk1AyleAVkCrqxMNoieFFPQ==",
+  "dgSpecHash": "9ZmO2oA1mGGb/GLcu2YYbiF0nzq6seYx2YXvGBf4T+SDjI7kDKQwlxANS2B6kjHGn06grr4iBq1hB24zBfpPpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\Nueva carpeta (2)\\Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\FinalPOOBD.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\Final Proyecto\\proyecto-final-grupo-29\\Proyecto BASES-POO 2021\\Programación orientada a objetos\\FinalPOOBD\\FinalPOOBD\\FinalPOOBD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
