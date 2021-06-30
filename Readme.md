@@ -23,6 +23,8 @@
 
 
 ![Dirrecion de carpetas](https://i.gyazo.com/6a4151b8892b177ed0bdb4f52db9e017.png)
+
+
 2. Ejecutas el instalador
 
 
