@@ -64,3 +64,10 @@ Termina la instalacion, le dan a cerrar, Se creara un ejecutable en el escritori
 3. Base de datos local necesaria, Gestor : SQL Server Management Studio
 ## Manual de usuario
 MANUAL_DE_USUARIO.pdf
+
+
+Iniciar sesion en el programa sera necesario un usuario y una contraseña
+
+
+![Inicio de sesion](https://i.gyazo.com/55d84f908d28bf02a81305bfbf8b7e4c.png)
+
